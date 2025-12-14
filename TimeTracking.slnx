@@ -6,4 +6,7 @@
     <File Path="global.json" />
     <File Path="NuGet.config" />
   </Folder>
+  <Folder Name="/src/">
+    <Project Path="Domain/Domain.csproj" />
+  </Folder>
 </Solution>
