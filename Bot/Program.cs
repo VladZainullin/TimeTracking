@@ -15,7 +15,8 @@ public static class Program
         {
             AllowedUpdates =
             [
-                UpdateType.Message
+                UpdateType.Message,
+                UpdateType.CallbackQuery
             ],
             DropPendingUpdates = true
         };
