@@ -9,9 +9,7 @@ public static class Program
 {
     public static async Task Main(string[] args)
     {
-        var telegramBotClientOptions = new TelegramBotClientOptions("910988441:AAEkb8QeyZZgD6WBlT-UOfoCJBtkppS-z8Q");
-
-        var telegramBotClient = new TelegramBotClient(telegramBotClientOptions);
+        var telegramBotClient = new TelegramBotClient("910988441:AAEkb8QeyZZgD6WBlT-UOfoCJBtkppS-z8Q");
 
         var receiverOptions = new ReceiverOptions
         {
