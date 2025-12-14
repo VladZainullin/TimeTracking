@@ -2,7 +2,7 @@ using Domain.Entities;
 
 namespace Domain.States;
 
-public abstract class ChatState
+public abstract class UserState
 {
     public static readonly StartState Start = new();
     public static readonly InitialNameState InitialName = new();
@@ -13,27 +13,27 @@ public abstract class ChatState
     
     public abstract string Message { get; }
     
-    public virtual void ToStart(Chat chat)
+    public virtual void ToStart(User user)
     {
     }
 
-    public virtual void ToInitialName(Chat chat)
+    public virtual void ToInitialName(User user)
     {
     }
     
-    public virtual void ToInitialSurname(Chat chat)
+    public virtual void ToInitialSurname(User user)
     {
     }
 
-    public virtual void ToProfile(Chat chat)
+    public virtual void ToProfile(User user)
     {
     }
 
-    public virtual void ToName(Chat chat)
+    public virtual void ToName(User user)
     {
     }
 
-    public virtual void ToSurname(Chat chat)
+    public virtual void ToSurname(User user)
     {
     }
 }

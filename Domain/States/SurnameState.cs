@@ -2,12 +2,12 @@ using Domain.Entities;
 
 namespace Domain.States;
 
-public class SurnameState : ChatState
+public class SurnameState : UserState
 {
     public override string Message => "Введите вашу фамилию";
 
-    public override void ToProfile(Chat chat)
+    public override void ToProfile(User user)
     {
-        base.ToProfile(chat);
+        base.ToProfile(user);
     }
 }

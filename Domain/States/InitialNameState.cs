@@ -2,17 +2,17 @@ using Domain.Entities;
 
 namespace Domain.States;
 
-public sealed class InitialNameState : ChatState
+public sealed class InitialNameState : UserState
 {
     public override string Message => "Введите ваше имя";
 
-    public override void ToStart(Chat chat)
+    public override void ToStart(User user)
     {
-        chat.ChangeState(Start);
+        user.ChangeState(Start);
     }
 
-    public override void ToInitialSurname(Chat chat)
+    public override void ToInitialSurname(User user)
     {
-        chat.ChangeState(InitialSurname);
+        user.ChangeState(InitialSurname);
     }
 }

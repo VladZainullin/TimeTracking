@@ -2,22 +2,22 @@ using Domain.Entities;
 
 namespace Domain.States;
 
-public sealed class ProfileState : ChatState
+public sealed class ProfileState : UserState
 {
     public override string Message => "Выберите изменение";
 
-    public override void ToStart(Chat chat)
+    public override void ToStart(User user)
     {
-        chat.ChangeState(Start);
+        user.ChangeState(Start);
     }
 
-    public override void ToName(Chat chat)
+    public override void ToName(User user)
     {
-        chat.ChangeState(Name);
+        user.ChangeState(Name);
     }
 
-    public override void ToSurname(Chat chat)
+    public override void ToSurname(User user)
     {
-        chat.ChangeState(Surname);
+        user.ChangeState(Surname);
     }
 }

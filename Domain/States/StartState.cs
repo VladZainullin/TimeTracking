@@ -2,12 +2,12 @@ using Domain.Entities;
 
 namespace Domain.States;
 
-public sealed class StartState : ChatState
+public sealed class StartState : UserState
 {
     public override string Message => "Здравствуйте! Заполните ваши данные";
 
-    public override void ToInitialName(Chat chat)
+    public override void ToInitialName(User user)
     {
-        chat.ChangeState(InitialName);
+        user.ChangeState(InitialName);
     }
 }

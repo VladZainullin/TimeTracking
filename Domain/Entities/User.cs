@@ -2,13 +2,13 @@ using Domain.States;
 
 namespace Domain.Entities;
 
-public sealed class Chat
+public sealed class User
 {
     public int Id { get; set; }
 
-    public ChatState State { get; set; } = null!;
+    public UserState State { get; set; } = null!;
     
-    internal void ChangeState(ChatState state)
+    internal void ChangeState(UserState state)
     {
         State = state;
     }
