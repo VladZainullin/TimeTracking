@@ -7,6 +7,7 @@
     <File Path="NuGet.config" />
   </Folder>
   <Folder Name="/src/">
+    <Project Path="Bot/Bot.csproj" />
     <Project Path="Domain/Domain.csproj" />
   </Folder>
 </Solution>
