@@ -3,17 +3,25 @@ using Telegram.Bot;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types.Enums;
 
-var telegramBotClientOptions = new TelegramBotClientOptions("910988441:AAEkb8QeyZZgD6WBlT-UOfoCJBtkppS-z8Q");
+namespace Bot;
 
-var telegramBotClient = new TelegramBotClient(telegramBotClientOptions);
-
-var receiverOptions = new ReceiverOptions
+public static class Program
 {
-    AllowedUpdates =
-    [
-        UpdateType.Message
-    ],
-    DropPendingUpdates = true
-};
-var handler = new StartHandler();
-await telegramBotClient.ReceiveAsync(handler, receiverOptions);
+    public static async Task Main(string[] args)
+    {
+        var telegramBotClientOptions = new TelegramBotClientOptions("910988441:AAEkb8QeyZZgD6WBlT-UOfoCJBtkppS-z8Q");
+
+        var telegramBotClient = new TelegramBotClient(telegramBotClientOptions);
+
+        var receiverOptions = new ReceiverOptions
+        {
+            AllowedUpdates =
+            [
+                UpdateType.Message
+            ],
+            DropPendingUpdates = true
+        };
+        var handler = new StartHandler();
+        await telegramBotClient.ReceiveAsync(handler, receiverOptions);
+    }
+}
